@@ -1,0 +1,10 @@
+.grid-container {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.grid-cell {
+    border: 2px solid rgb(214, 26, 26);
+    padding: 3rem;
+    aspect-ratio: 1/1;
+}

@@ -8,6 +8,8 @@ btnGenerateGrid.addEventListener(`click`, function(){
     // const numCells = document.getElementById(`num-cells`);
     if (select.value == 7){
         alert(`Are you sure?`)
+    }else if (select.value == 10){
+        alert(`Don't be a pu**y`)
     }
     const difficulty = select.value;
     // console.log(difficulty);

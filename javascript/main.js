@@ -6,6 +6,9 @@ btnGenerateGrid.addEventListener(`click`, function(){
     // console.log(select);
     // console.log(numCells);
     // const numCells = document.getElementById(`num-cells`);
+    if (select.value == 7){
+        alert(`Are you sure?`)
+    }
     const difficulty = select.value;
     // console.log(difficulty);
     generateGrid(difficulty);

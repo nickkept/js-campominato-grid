@@ -6,8 +6,8 @@ btnGenerateGrid.addEventListener(`click`, function(){
     // console.log(select);
     // console.log(numCells);
     // const numCells = document.getElementById(`num-cells`);
-    const difficulty = 10;
-    console.log(difficulty);
+    const difficulty = select.value;
+    // console.log(difficulty);
     generateGrid(difficulty);
     // console.log(numCells.value);
 });
@@ -19,12 +19,17 @@ function generateGrid(difficulty) {
 
     for ( let i = 0; i < totalCells; i++ ) {
         const newCell = document.createElement(`div`);
-        newCell.classList.add(`grid.cell`);
+        newCell.classList.add(`grid-cell`);
         newCell.style.flexBasis = `calc(100% / ${difficulty})`;
         newCell.style.width = `calc(100% / ${difficulty})`;
+        newCell.innerHTML = generateRandomNumb( 1, totalCells );
         newCell.addEventListener(`click`, function(){
             this.classList.toggle( "bg-success" );
+            console.log(i)
         });
         gridContainer.append(newCell);
     }
+}
+function generateRandomNumb ( min, max ) {
+    return Math.floor( Math.random() * ( max - min + 1 ) ) + min;
 }
